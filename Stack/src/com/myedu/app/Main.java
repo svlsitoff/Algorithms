@@ -14,6 +14,7 @@ public class Main {
             a.Push(ranInt);
         }
         for(int j =0;j<a.size();j++) {
+            int item = a.pop();
             System.out.println(a.pop());
         }
     }
