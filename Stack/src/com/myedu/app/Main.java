@@ -6,8 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Random random = new Random();
-        TempStack<Integer> a;
-        a = new TempStack<Integer>(100);
+        Stack<Integer> a = new Stack<Integer>();
         for (int i=0;i<120;i++){
             int ranInt = random.nextInt(100000);
             a.Push(ranInt);
