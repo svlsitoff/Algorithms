@@ -1,5 +1,7 @@
 package com.myedu.app;
 
+import java.util.Iterator;
+
 public class TempStack <Item>{
     //стек содержит массив обьектов ссылочного типа
     private  Item[] a;
@@ -40,6 +42,22 @@ public class TempStack <Item>{
       for(int i=0;i<N;i++)
           temp[i]=a[i];
       a=temp;
+    }
+    public Iterator<Item> iterator(){
+        return new ReverseArrayIterator();
+    }
+    private class ReverseArrayIterator implements Iterator<Item>{
+
+        private  int i = N;
+        @Override
+        public boolean hasNext() {
+            return  i>0;
+        }
+
+        @Override
+        public Item next() {
+            return a[--i];
+        }
     }
 
 }
